@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION 3.28)
-project(CMakeSFMLProject LANGUAGES CXX)
+project(CheddarQuest LANGUAGES CXX)
+
+# This directive ensures that the debugger uses the project root directory
+# for the working directory of the running application, so that assets can
+# be loaded directly from files on disk.
+set(VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
